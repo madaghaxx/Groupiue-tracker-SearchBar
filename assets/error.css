@@ -1,0 +1,44 @@
+body {
+    background-color: #315b61;
+    font-family: "Arial", "Helvetica", sans-serif;
+  }
+  
+  .message {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 300%;
+    margin-bottom: 20px;
+    color: #ecdfcc;
+  }
+  
+  .number {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    color: #142d4c;
+    font-size: 700%;
+  }
+  .botona {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .back-link {
+    color: #ecdfcc;
+    background-color: #142d4c;
+    width: 100px;
+    border: #0a1935 solid 2px;
+    border-radius: 20px;
+    min-height: 30px;
+    text-align: center;
+    transition-delay: 100ms;
+    margin-top: 100px;
+  }
+  
+  .back-link:hover {
+    transform: scale(1.01);
+    color: #142d4c;
+    background-color: #ecdfcc;
+    border: #0a1935 solid 2px;
+  }

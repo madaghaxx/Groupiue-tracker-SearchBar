@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Name}}</title>
+   <link rel="stylesheet" href="/assets/artists.css">
+</head>
+<body>
+    
+
+    <h1 class="NameofTheArtist" >{{.Name}}</h1>
+
+
+    
+    <div class="if">
+        <div  class="artists-container">
+            <img src="{{.Image}}" alt="{{.Name}}">
+        </div>
+    
+        <div>
+            <p><strong>First Album:</strong> {{.FirstAlbum}}</p>
+        </div>   
+    </div>
+     
+
+    <div>
+        <a  class="ok" href="../">GO BACK</a>
+    </div>
+
+
+    
+    <div class="artistdata">        
+           
+            <div class="Members">
+                <h2>Members</h2>
+                <ul>
+                    {{range .Members}}
+                    <li>{{.}}</li>
+                    {{else}}
+                    <li>No members</li>
+                    {{end}}
+                </ul>
+            </div>
+            
+
+            <div class="Relations">
+                <h2>Relations</h2>
+                <ul>
+                    {{range $key, $value := .RelationData.Data}}
+                        <li>
+                            <strong>{{ $key }}</strong>
+                            <ul>
+                                {{range $value}}
+                                    <li>{{.}}</li>
+                                {{end}}
+                            </ul>
+                        </li>
+                    {{end}}
+                </ul>
+            </div>
+
+
+            <div class="ConcertDates">
+                <h2>ConcertDates</h2>
+                <ul>
+                  {{range .ConcertDatesDATA.Data}}
+                  <li>{{.}}</li>
+                      {{else}}
+                  <li>No ConcertDates</li>
+                      {{end}}
+                </ul>
+            </div>
+               
+        <div class="Locations">
+            <h2>Locations</h2>
+            <ul>
+               {{range .LocationsDATA.Data}}
+               <li>{{.}}</li>
+                  {{else}}
+               <li>No Locations</li>
+                  {{end}}
+            </ul>
+        </div>
+    </div> 
+</body>
+</html>

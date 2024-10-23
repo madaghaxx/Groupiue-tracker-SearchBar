@@ -1,0 +1,101 @@
+body {
+  background-color: #315b61;
+  font-family: "Arial", "Helvetica", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.tit {
+  color: #f0f8ff;
+  background: linear-gradient(90deg, #0a2351, #4ca1af);
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+  margin-left: 20%;
+  margin-right: 20%;
+  flex-wrap: wrap;
+  font-weight: 500;
+}
+
+.artists-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.artist-card {
+  background-color: #002a5569;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  width: 230px;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.5s ease;
+}
+
+.artist-card:hover {
+  transform: translateY(-10px);
+}
+
+.artist-card img {
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  transition: transform 0.5s ease;
+}
+
+.artist-card:hover img {
+  transform: scale(1.1);
+}
+
+.CreationDateoftheartist {
+  opacity: 0;
+}
+
+.artist-card:hover .CreationDateoftheartist {
+  color: #ffffff;
+  opacity: 1;
+  font-weight: bold;
+  transition: color 0.3s ease, opacity 0.8s ease;
+}
+
+.search-container {
+  margin: 20px;
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+/* 
+@media (max-width: 1200px) {
+  input[type="text"] {
+    width: 40%;
+    padding: 8px;
+  }
+
+  .search-container {
+    margin: 10px;
+  }
+}
+
+@media (min-width: 600px) {
+  input[type="text"] {
+    max-width: 400px;
+  }
+} */

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artists</title>
+    <link rel="stylesheet" href="/assets/styles.css"> 
+</head>
+<body>
+    <div class="tit"> 
+          <h1>Groupie Tracker</h1>
+    </div>
+
+    <div class="search-container">
+        <form action="/search" method="GET">
+            <input type="text" name="SeArch"  placeholder="Search" list="option">
+            
+            <datalist id="option">
+                {{range .}}
+            <option value="{{.Name}}">{{.Name}}</option>
+            <option value="{{.CreationDate}}">{{.CreationDate}}</option>
+            <option value="{{.FirstAlbum}}">{{.FirstAlbum}}</option>
+               {{range .Members}} 
+            <option value="{{.}}"></option>{{.}} </option>
+                {{end}}
+                {{end}}
+           </datalist>
+           
+        
+        </form>
+    </div>
+
+    <div class="artists-container">
+        {{range .}}
+        <div class="artist-card">
+          
+            <a href="/Artist/{{.ID}}"> 
+                <img src="{{.Image}}" alt="{{.Name}} Image">
+            </a>
+            <h2 class="NameOfArtist" name="artistName" value="{{.Name}}">{{.Name}}🎶</h2>
+
+            <h2 class="CreationDateoftheartist"><strong>Creation Date:</strong>{{.CreationDate}}</h2>
+           
+       </div>
+       {{end}}
+    </div> 
+</body>
+</html>

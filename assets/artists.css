@@ -1,0 +1,50 @@
+body {
+    text-align: center;
+    background-color:#315b61;
+}
+
+.if{
+    text-align: center;
+  
+}
+
+.artistdata{
+   padding: 4%;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   
+   gap: 20px;
+ 
+}
+
+.Members , .Relations , .ConcertDates , .Locations {
+    background-color: #002a5569; 
+    padding: 10px;
+    margin-top: 5px;
+   
+    border-radius: 10px;
+    
+    justify-content: center;
+}
+
+.NameofTheArtist{
+    text-align: center;
+}
+
+
+.ok{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #194b1b;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.ok:hover {
+    background-color: #003e57;
+}
